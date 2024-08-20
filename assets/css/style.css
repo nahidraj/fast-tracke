@@ -232,6 +232,43 @@ body {
 .header-section .navbar .navbar-nav .nav-item .nav-link:hover {
   color: var(--primary);
 }
+.header-section .navbar .navbar-nav .nav-item .nav-link svg {
+  width: 19px;
+  height: 19px;
+  position: relative;
+  top: -2px;
+}
+.header-section .navbar .navbar-nav .nav-item .sub-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 230px;
+  background-color: var(--white);
+  box-shadow: 0px 10px 30px 0px rgba(137, 139, 142, 0.2);
+  padding: 18px 0;
+  transition: var(--transition);
+  visibility: hidden;
+  opacity: 0;
+  margin-top: 20px;
+}
+.header-section .navbar .navbar-nav .nav-item .sub-menu li a {
+  color: var(--black);
+  font-weight: 500;
+  line-height: 38px;
+  padding: 0 20px;
+  width: 100%;
+}
+.header-section .navbar .navbar-nav .nav-item .sub-menu li a:hover {
+  color: var(--primary);
+}
+.header-section .navbar .navbar-nav .nav-item:hover > .nav-link {
+  color: var(--primary);
+}
+.header-section .navbar .navbar-nav .nav-item:hover > .sub-menu {
+  margin-top: 0;
+  visibility: visible;
+  opacity: 1;
+}
 .header-section .navbar .navbar-nav .nav-item .active {
   font-weight: 700;
   color: var(--primary);

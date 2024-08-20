@@ -105,6 +105,53 @@
           &:hover {
             color: var(--primary);
           }
+
+          svg {
+            width: 19px;
+            height: 19px;
+            position: relative;
+            top: -2px;
+          }
+        }
+
+        .sub-menu {
+          position: absolute;
+          top: 100%;
+          left: 0;
+          min-width: 230px;
+          background-color: var(--white);
+          box-shadow: 0px 10px 30px 0px rgba(137, 139, 142, 0.2);
+          padding: 18px 0;
+          transition: var(--transition);
+          visibility: hidden;
+          opacity: 0;
+          margin-top: 20px;
+
+          li {
+            a {
+              color: var(--black);
+              font-weight: 500;
+              line-height: 38px;
+              padding: 0 20px;
+              width: 100%;
+
+              &:hover {
+                color: var(--primary);
+              }
+            }
+          }
+        }
+
+        &:hover> {
+          .nav-link {
+            color: var(--primary);
+          }
+
+          .sub-menu {
+            margin-top: 0;
+            visibility: visible;
+            opacity: 1;
+          }
         }
 
         .active {
