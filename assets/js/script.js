@@ -10,6 +10,17 @@ $(function () {
     },
   });
 
+  // offcanvas js
+  $(".offcanvas-menu-btn").on("click", function () {
+    $(".menu_overlay").addClass("active_menu_overlay");
+    $(".menu_main_area").addClass("active_menu_main_area");
+  });
+
+  $(".close_offcanvas, .menu_overlay").on("click", function () {
+    $(".menu_overlay").removeClass("active_menu_overlay");
+    $(".menu_main_area").removeClass("active_menu_main_area");
+  });
+
   // video js
   $('.vidplay').magnificPopup({
     type: 'iframe',

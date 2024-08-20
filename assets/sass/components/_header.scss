@@ -73,13 +73,16 @@
     }
   }
 
-  .offcanvas-menu {
+  .offcanvas-menu-btn {
     width: 110px;
     height: 110px;
     background-color: #f1f1f1;
     color: var(--primary);
     margin-right: 60px;
     flex: 0 0 auto;
+    &:hover{
+      background-color: var(--black);
+    }
 
     svg {
       width: 36px;
@@ -275,7 +278,7 @@
 }
 
 .sticky-menu {
-  background-color: var(--bs-white);
+  background-color: var(--white);
   animation: 400ms ease-in-out 0s normal none 1 running fadeInDown;
   box-shadow: 0 2px 20px rgba(25, 25, 25, 0.1);
   border-radius: 0;
@@ -287,6 +290,157 @@
   .top-header-area {
     display: none;
   }
+}
+
+.offcanvas_menu {
+  .menu_overlay {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    content: "";
+    background: rgba(4, 0, 23, .8);
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--transition);
+    transform-origin: left;
+  }
+
+  .menu_main_area {
+    overflow-Y: auto;
+    width: 100%;
+    max-width: 350px;
+    box-shadow: 0 13px 29px rgba(4, 0, 23, .1);
+    height: 100vh;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    padding:30px;
+    background-color: #fff;
+    left: -500px;
+    opacity: 0;
+    transition: var(--transition);
+
+    .close_offcanvas {
+      position: absolute;
+      right: 30px;
+      top: 30px;
+      width: 40px;
+      height: 40px;
+      border: 1px solid var(--black);
+      border-radius: 3px;
+      background-color: transparent;
+      text-align: center;
+      color: var(--black);
+
+      &:hover {
+        background-color: var(--primary);
+        color: var(--white);
+        border-color: var(--primary);
+      }
+    }
+
+    .logo {
+      margin-bottom: 24px;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 30px;
+    }
+
+    .info_item {
+      margin-bottom: 24px;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 30px;
+
+      &:last-child {
+        border-bottom: 0;
+      }
+
+      .title {
+        @include font(20px, 600);
+        margin-bottom: 15px;
+      }
+    }
+
+    .info_item.social {
+      ul {
+        li {
+          display: inline-block;
+          margin-right: 5px;
+
+          a {
+            width: 35px;
+            height: 35px;
+            background-color: var(--black);
+            border-radius: 3px;
+            text-align: center;
+            line-height: 35px;
+            color: var(--white);
+            svg{
+              width: 20px;
+              height: 20px;
+            }
+
+            &:hover {
+              background-color: var(--primary);
+            }
+          }
+        }
+      }
+    }
+
+    .info_item.contact {
+      ul {
+        li {
+          display: flex;
+          align-items: center;
+          margin-bottom: 20px;
+
+          .icons {
+            margin-right: 20px;
+
+            i {
+              width: 35px;
+              height: 35px;
+              border: 1px solid var(--primary);
+              border-radius: 3px;
+              text-align: center;
+              line-height: 35px;
+              color: var(--primary);
+            }
+          }
+
+          .text {
+
+            a,
+            p {
+              @include font(16px, 500);
+              color: var(--black);
+            }
+
+            a {
+              &:hover {
+                color: var(--primary);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.active_menu_overlay {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: scaleX(1) !important;
+}
+
+.active_menu_main_area {
+  left: 0 !important;
+  opacity: 1 !important;
+  visibility: visible !important;
 }
 
 /* Mobile menu area start */
@@ -478,7 +632,7 @@
 // }
 
 @media (max-width: 1799.98px) {
-  .offcanvas-menu {
+  .offcanvas-menu-btn {
     width: 90px !important;
     height: 90px !important;
     margin-right: 20px !important;
@@ -508,7 +662,7 @@
 }
 
 @media (max-width: 1199.98px) {
-  .offcanvas-menu {
+  .offcanvas-menu-btn {
     width: 70px !important;
     height: 70px !important;
     margin-right: 20px !important;
