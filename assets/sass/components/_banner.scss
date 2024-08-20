@@ -1,0 +1,281 @@
+.banner-area {
+  background-size: cover !important;
+  padding-top: 184px;
+  padding-bottom: 30px;
+  min-height: 100vh;
+
+  .banner-img {
+    .celebrate {
+      top: 96px;
+      left: 0
+    }
+  }
+
+  .banner-text {
+    .banner-sub-title {
+      @include font(20px, 700);
+      color: var(--white);
+      letter-spacing: 2px;
+      margin-bottom: 20px
+    }
+
+    .banner-title {
+      @include font(72px, 700);
+      color: var(--white);
+    }
+
+    .short-info {
+      @include font(24px, 500);
+      color: var(--white);
+      margin-top: 10px;
+      margin-bottom: 44px;
+    }
+
+    .chat-whatsapp {
+      margin-left: 15px;
+    }
+
+    .call-us {
+      margin-top: 50px;
+      font-size: 20px;
+      color: var(--white);
+      font-family: var(--font-jost);
+      font-weight: 500;
+
+      img {
+        margin-right: 15px;
+        position: relative;
+        top: -4px;
+        display: inline-block;
+      }
+
+      span {
+        font-family: "Sora", sans-serif;
+      }
+
+      .call-us-btn {
+        font-weight: 700;
+        color: var(--white);
+
+        &:hover {
+          color: var(--primary);
+        }
+      }
+    }
+  }
+
+  .slick-dots {
+    position: absolute;
+    top: 50%;
+    left: 115px;
+    transform: translateY(-50%);
+
+    li {
+      list-style-type: none;
+      margin: 14px 0;
+
+      button {
+        font-size: 0;
+        width: 20px;
+        height: 20px;
+        border: 0;
+        background-color: var(--white);
+        border-radius: 5px;
+
+      }
+    }
+
+    .slick-active {
+      button {
+        background-color: var(--primary);
+      }
+    }
+  }
+}
+
+@media (max-width: 1799.98px) {
+  .banner-area .banner-img {
+    width: 100%;
+
+    .banner-single-img {
+      width: 100%;
+    }
+
+    .celebrate {
+      width: 140px;
+    }
+  }
+
+  .banner-area .banner-text .banner-title {
+    font-size: 60px;
+  }
+
+  .banner-area .banner-text .banner-sub-title {
+    font-size: 16px;
+  }
+
+  .banner-area .banner-text .short-info {
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 10px;
+    margin-bottom: 33px;
+  }
+
+  .theme-btn {
+    padding: 18px 30px;
+  }
+
+  .banner-area .banner-text .call-us {
+    font-size: 18px;
+  }
+
+  .banner-area {
+    padding-top: 244px;
+    padding-bottom: 78px;
+    min-height: unset;
+  }
+
+  .banner-area .banner-img .celebrate {
+    top: 36px;
+    left: 0;
+  }
+
+  .banner-area .slick-dots li button {
+    width: 16px;
+    height: 16px;
+  }
+
+  .banner-text {
+    padding-left: 60px;
+  }
+
+  .banner-area .slick-dots {
+    left: 30px;
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .banner-area .banner-text .banner-title {
+    font-size: 50px;
+  }
+
+  .banner-area .banner-text .banner-sub-title {
+    margin-bottom: 10px;
+  }
+
+  .banner-area .banner-text .short-info {
+    font-size: 18px;
+  }
+
+  .theme-btn {
+    padding: 18px 20px;
+  }
+
+  .theme-btn svg {
+    margin-right: 5px;
+  }
+
+  .banner-area .banner-img .celebrate {
+    width: 113px;
+  }
+
+  .banner-area {
+    padding-top: 200px;
+  }
+
+  .banner-text {
+    padding-left: 30px;
+  }
+
+  .banner-area .slick-dots {
+    left: 10px;
+  }
+
+  .banner-area .banner-text .chat-whatsapp {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+
+  .banner-area .slick-dots li {
+    margin: 5px 0;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .banner-text {
+    text-align: center;
+  }
+
+  .banner-area .banner-img {
+    width: 500px;
+    margin: 0 auto;
+  }
+
+  .banner-area .banner-img .celebrate {
+    top: 46px;
+    left: 0;
+    width: 141px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .banner-area {
+    padding-top: 141px;
+    padding-bottom: 50px;
+  }
+
+  .theme-btn {
+    letter-spacing: 1px;
+    ;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .banner-area .banner-text .banner-title {
+    font-size: 34px;
+  }
+
+  .banner-area .banner-text .banner-sub-title {
+    font-size: 14px;
+  }
+
+  .banner-area .banner-text .short-info {
+    font-size: 16px;
+  }
+
+  .banner-area .theme-btn {
+    margin-bottom: 10px;
+    width: 100%;
+    text-align: center;
+    margin-left: 0 !important;
+  }
+
+  .banner-area .banner-text .call-us {
+    margin-top: 23px;
+    font-size: 15px;
+  }
+
+  .banner-area .banner-text .call-us img {
+    margin-right: 5px;
+  }
+
+  .banner-area .banner-img {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .banner-area .banner-img .celebrate {
+    top: 46px;
+    left: 0;
+    width: 108px;
+  }
+
+  .banner-area .slick-dots li button {
+    width: 9px;
+    height: 9px;
+  }
+
+  .banner-area .slick-dots li {
+    margin: -5px 0;
+  }
+}

@@ -1,0 +1,38 @@
+.clients-video-area {
+  margin-top: 120px;
+
+  .video-item {
+    border-radius: 10px;
+    overflow: hidden;
+
+    img {
+      border-radius: 10px;
+    }
+  }
+
+  .more-testimonial {
+    margin-top: 50px;
+
+    .theme-btn {
+      padding: 18px 35px;
+    }
+  }
+}
+
+@media (max-width: 1399.98px) {}
+
+@media (max-width: 1199.98px) {}
+
+@media (max-width: 991.98px) {}
+
+@media (max-width: 767.98px) {
+  .clients-video-area {
+    margin-top: 80px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .clients-video-area .video-item img {
+    width: 60px;
+  }
+}

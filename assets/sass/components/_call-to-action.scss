@@ -1,0 +1,161 @@
+.call-to-action-area {
+  margin-top: 120px;
+  background-position: center !important;
+  padding: 120px 0 205px 0;
+
+  .img {
+    top: 54px;
+  }
+
+  .text {
+    .help {
+      @include font(24px, 600);
+      color: var(--white);
+      margin-bottom: 20px;
+    }
+
+    h5 {
+      @include font(48px, 700);
+      color: var(--white);
+      margin-bottom: 10px;
+
+      a {
+        color: var(--primary);
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    h6 {
+      @include font(48px, 300);
+      color: var(--white);
+    }
+
+    .btn-groups {
+      margin-top: 30px;
+    }
+
+    .chat-whatsapp {
+      margin-left: 10px;
+    }
+  }
+
+  .join-course {
+    width: 1170px;
+    bottom: -75px;
+    background-position: center;
+    border-radius: 10px;
+    padding: 39px 51px 39px 70px;
+
+    .text {
+      margin-left: 40px;
+
+      .title {
+        @include font(40px, 700);
+        color: var(--black);
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1399.98px) {
+  .call-to-action-area .join-course {
+    width: 1115px;
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .call-to-action-area .text h5 {
+    font-size: 44px;
+  }
+
+  .call-to-action-area .text h6 {
+    font-size: 36px;
+  }
+
+  .call-to-action-area .text .help {
+    font-size: 20px;
+  }
+
+  .call-to-action-area .join-course {
+    width: 935px;
+  }
+
+  .call-to-action-area .join-course .text .title {
+    font-size: 34px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .join-course {
+    width: 695px !important;
+    padding: 30px 30px 30px 30px !important;
+    background-size: cover !important;
+  }
+
+  .call-to-action-area .join-course .text {
+    margin-left: 16px;
+  }
+
+  .call-to-action-area .join-course {
+    width: 1170px;
+    bottom: -125px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .call-to-action-area {
+    background-size: cover !important;
+  }
+
+  .call-to-action-area {
+    margin-top: 80px;
+  }
+
+  .call-to-action-area .text h5 {
+    font-size: 30px;
+  }
+
+  .call-to-action-area .text h6 {
+    font-size: 26px;
+  }
+
+  .call-to-action-area {
+    padding: 80px 0 80px 0;
+  }
+
+  .join-course {
+    position: static !important;
+    width: 100% !important;
+    margin-top: 50px;
+    background-size: cover !important;
+  }
+
+  .call-to-action-area .join-course .text {
+    margin-left: 43px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .call-to-action-area .text .btn-groups {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .call-to-action-area .join-course {
+    text-align: center;
+  }
+
+  .call-to-action-area .join-course .text {
+    margin-left: 0;
+  }
+
+  .call-to-action-area .join-course .text .title {
+    font-size: 28px;
+  }
+}

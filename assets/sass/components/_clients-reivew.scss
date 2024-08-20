@@ -1,0 +1,164 @@
+.clients-review-area {
+  margin-top: 120px;
+
+  .clients-reivew-item {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    background-color: var(--white);
+    border-radius: 10px;
+    padding: 36px 30px;
+    margin: 0 15px;
+
+    .star {
+      margin-bottom: 20px;
+      display: inline-flex;
+    }
+
+    .text {
+      p {
+        line-height: 28px;
+
+        a {
+          color: var(--primary);
+        }
+      }
+
+      .customer {
+        margin-top: 26px;
+
+        .img {
+          width: 82px;
+          height: 82px;
+          border-radius: 50%;
+          margin-right: 24px;
+          flex: 0 0 auto;
+
+          img {
+            border-radius: 50%;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+          }
+        }
+
+        .info {
+          .name {
+            @include font(20px, 700);
+            color: var(--black);
+            margin-bottom: 5px
+          }
+
+          .date {
+            @include font(14px, 400);
+            color: var(--paragraph);
+            margin-top: 2px;
+          }
+        }
+      }
+    }
+  }
+
+  .arrow {
+    width: 60px;
+    height: 60px;
+    background-color: var(--black);
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: var(--transition);
+    z-index: 9;
+    margin-top: -20px;
+    padding: 17px;
+
+    &:hover {
+      background-color: var(--primary);
+    }
+  }
+
+  .arrow-left {
+    left: -95px;
+  }
+
+  .arrow-right {
+    right: -95px;
+  }
+
+  .rating-score {
+    margin-top: 60px;
+    @include font(18px, 400);
+    color: var(--paragraph);
+
+    span {
+      font-weight: 700;
+      color: var(--black);
+    }
+  }
+
+  .slick-list {
+    padding-bottom: 10px;
+    margin-bottom: -10px;
+  }
+}
+
+@media (max-width: 1399.98px) {
+  .clients-review-area .arrow {
+    width: 50px;
+    height: 50px;
+  }
+
+  .clients-review-area .arrow-left {
+    left: -10px;
+  }
+
+  .clients-review-area .arrow-right {
+    right: -10px;
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .clients-review-area .clients-reivew-item .text .customer .info .name {
+    font-size: 18px;
+  }
+
+  .clients-review-area .clients-reivew-item .text .customer .img {
+    width: 70px;
+    height: 70px;
+    margin-right: 16px;
+  }
+
+  .clients-review-area .clients-reivew-item {
+    padding: 24px 24px;
+    height: 100%;
+  }
+
+  .clients-review-area .clients-reivew-item .text p {
+    font-size: 15px;
+  }
+
+  .clients-review-area .arrow-left {
+    left: -18px;
+  }
+
+  .clients-review-area .arrow-right {
+    right: -18px;
+  }
+}
+
+@media (max-width: 991.98px) {}
+
+@media (max-width: 767.98px) {
+  .clients-review-area {
+    margin-top: 80px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .clients-review-area .arrow {
+    display: none !important;
+  }
+}

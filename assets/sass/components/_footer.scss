@@ -1,0 +1,257 @@
+.footer-area {
+  background-size: cover !important;
+  margin-top: 264px;
+
+  .register-now {
+    background-color: #f1f1f1;
+    border-radius: 10px;
+    top: -150px;
+    padding: 0 0 0 60px;
+    max-width: 1170px;
+
+    .text {
+      .sub-title {
+        @include font(40px, 300);
+        color: var(--primary);
+      }
+
+      .title {
+        @include font(48px, 700);
+        color: var(--black);
+        margin-top: 5px;
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  .footer-main {
+    padding-top: 245px
+  }
+
+  .footer-widget {
+    .footer-title {
+      @include font(24px, 700);
+      color: var(--white);
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--primary);
+      margin-bottom: 30px;
+    }
+
+    p {
+      color: var(--white);
+      padding-right: 46px;
+      margin-top: 16px;
+    }
+  }
+
+  .footer-about {
+    .social-icon {
+      margin-top: 24px;
+
+      a {
+        color: var(--white);
+        margin-right: 19px;
+
+        &:hover {
+          color: var(--primary);
+        }
+
+        svg {
+          width: 22px;
+          height: 22px;
+          stroke-width: 1.5px !important;
+        }
+      }
+    }
+  }
+
+  .footer-award {
+    p {
+      padding-right: 36px;
+    }
+  }
+
+  .footer-link {
+    padding-right: 40px;
+
+    a {
+      margin-bottom: 17px;
+      color: var(--white);
+      @include font(16px, 700);
+      text-transform: uppercase;
+
+      &:hover {
+        color: var(--primary);
+      }
+    }
+  }
+
+  .time {
+    p {
+      margin-top: 0;
+      color: var(--white);
+      @include font(16px, 700);
+      margin-bottom: 10px;
+
+      span {
+        font-weight: 500;
+        color: #f1f1f1;
+      }
+    }
+  }
+
+  .payment {
+    margin-top: 50px;
+  }
+
+  .footer-btm {
+    background-color: var(--primary);
+    margin-top: 60px;
+    padding: 22px 0;
+
+    .row {
+      --bs-gutter-y: 0px;
+    }
+
+    .text {
+      p {
+        color: var(--white);
+
+        a {
+          color: var(--black);
+          font-weight: 700;
+        }
+      }
+    }
+  }
+}
+
+/* back to top button */
+.scroll-to-top {
+  background: var(--black);
+  width: 40px;
+  height: 40px;
+  color: var(--white);
+  border-radius: 5px;
+  border: 0;
+  bottom: -45px;
+  right: 24px;
+  opacity: 0;
+  visibility: hidden;
+  font-size: 18px;
+  z-index: 99;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.scroll-to-top.show {
+  opacity: 1;
+  visibility: visible;
+  bottom: 24px;
+}
+
+@media (max-width: 1399.98px) {
+  .footer-area .register-now {
+    max-width: 1115px;
+  }
+
+  .footer-area .register-now .text .title {
+    font-size: 42px;
+  }
+
+  .footer-area .register-now .text .sub-title {
+    font-size: 31px;
+  }
+
+  .footer-area .footer-main {
+    padding-top: 180px;
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .footer-area .register-now {
+    max-width: 935px;
+    padding: 0 0 0 30px;
+  }
+
+  .footer-area .register-now .text .title {
+    font-size: 34px;
+  }
+
+  .footer-area .register-now .text .sub-title {
+    font-size: 26px;
+  }
+
+  .footer-area .footer-main {
+    padding-top: 140px;
+  }
+
+  .footer-main .logo {
+    img {
+      width: 100%;
+    }
+  }
+
+  .footer-area .footer-widget .footer-title {
+    font-size: 18px;
+  }
+
+  .footer-area .footer-widget p {
+    padding-right: 0;
+  }
+
+  .footer-area .footer-link a {
+    font-size: 15px;
+  }
+
+  .footer-area .time p {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .footer-area .register-now .text .title {
+    font-size: 24px;
+  }
+
+  .footer-area .register-now .text .sub-title {
+    font-size: 22px;
+  }
+
+  .footer-area .footer-btm {
+    padding: 17px 0;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .footer-area .register-now {
+    padding: 30px !important;
+    text-align: center;
+  }
+
+  .footer-area .register-now .img {
+    display: none;
+  }
+
+  .footer-area {
+    background-size: cover !important;
+    margin-top: 180px;
+  }
+
+  .footer-area .register-now {
+    top: -104px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .footer-main {
+    text-align: center;
+  }
+
+  .footer-area .footer-link {
+    padding-right: 0;
+  }
+  .footer-area .payment img{
+    width: 70%;
+  }
+}

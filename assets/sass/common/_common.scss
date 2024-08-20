@@ -1,0 +1,154 @@
+@import "../mixin/font";
+
+/* Variable CSS start */
+
+:root {
+  --white: #ffffff;
+  --black: #262b62;
+  --primary: #db4746;
+  --paragraph: #555555;
+  --transition: all .3s ease-in-out;
+  --font-jost: "Jost", sans-serif;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Jost", sans-serif;
+  color: var(--black)
+}
+
+p {
+  @include font(16px, 400);
+  line-height: 26px;
+  color: var(--paragraph);
+}
+
+span {
+  display: inline-block;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+a,
+button {
+  transition: var(--transition);
+}
+
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow-x: hidden;
+  @include font(16px, 400);
+  color: var(--black);
+  position: relative;
+  font-family: "Roboto", sans-serif;
+  background: url(../images/background.png);
+  background-position: 0 122px;
+}
+
+::selection {
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+.g-4 {
+  --bs-gutter-y: 30px !important;
+  --bs-gutter-x: 30px !important;
+}
+
+// section title
+.section-title {
+  padding-bottom: 60px;
+
+  .section-title-img {
+    top: -30px;
+  }
+
+  .sub-title {
+    @include font(18px, 500);
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+
+  .sub-title-primary {
+    color: var(--primary)
+  }
+
+  .title {
+    @include font(48px, 700);
+
+    span {
+      color: var(--primary);
+      font-weight: 400;
+    }
+  }
+
+  p {
+    margin-top: 14px;
+  }
+}
+
+// theme btn
+.theme-btn {
+  background-color: var(--primary);
+  border-radius: 60px;
+  padding: 23px 35px;
+  transition: var(--transition);
+  color: var(--white);
+  @include font(14px, 700);
+  font-family: var(--font-jost);
+  z-index: 1;
+  letter-spacing: 2px;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
+
+  svg {
+    margin-right: 10px;
+    position: relative;
+    top: -2px;
+  }
+
+  &:hover {
+    &:hover {
+      background-color: var(--black);
+    }
+  }
+}
+
+.btn-secondary {
+  background-color: #3abc6b;
+}
